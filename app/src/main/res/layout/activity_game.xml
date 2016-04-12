@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activityRoot"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:id="@+id/linearLayout">
+        <EditText
+            android:imeOptions="actionSend"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:id="@+id/command_input"
+            android:layout_alignParentBottom="true"
+            android:hint="Command Line"
+            android:background="#ffffff"
+            android:layout_below="@+id/commands"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.95" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/linearLayout">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalScrollView" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/commands"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#11c32e"
+                android:layout_above="@+id/run_command"
+                android:textSize="18dp"
+                android:gravity="top"
+                android:layout_alignParentTop="true" />
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+</RelativeLayout>
